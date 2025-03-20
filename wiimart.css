@@ -23,8 +23,8 @@ a {
   color: var(--text);
 }
 
-body {
-  cursor: url('/img/cursor.png'), auto;
+body, * {
+  cursor: url('wii-cursor.png'), auto !important;
 }
 
 a:hover {
