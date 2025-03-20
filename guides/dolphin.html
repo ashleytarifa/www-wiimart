@@ -9,27 +9,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar">
-    <img src="../img/icon.webp" alt="WiiMart Icon" class="nav-icon">
-    <a href="../main.html#home">Home</a>
-    <a href="../main.html#installation">Installation</a>
-    <a href="https://github.com/WiiMart" target="_blank">GitHub</a>
-    <a href="https://discord.gg/PBqNmJpGTP" target="_blank">Discord</a>
-    <a href="../main.html#faq">FAQ</a>
-    <a href="../errors.html">Errors</a>
-    <a href="../status.html">WiiMart Status</a>
-</nav>
+    <nav class="navbar">
+        <img src="../img/icon.png" alt="WiiMart Icon" class="nav-icon">
+        <a href="/main.html">Home</a>
+        <a href="/main.html">Installation</a>
+        <a href="https://github.com/WiiMart" target="_blank">GitHub</a>
+        <a href="https://discord.gg/PBqNmJpGTP" target="_blank">Discord</a>
+        <a href="/main.html">About</a>
+    </nav>
 
     <div class="container-guide">
-        <h1>Dolphin Installation Guide</h1>
-        <p>In development, come back soon!</p>
+      <h1>Dolphin Installation Guide</h1>
 
-        <div><a onclick="history.back()">➔ Return to Installation Guide Page</a></div>
+      <p>You need a dumped Wii NAND to use WiiMart on Dolphin. You can dump your Wii's NAND following the guides below:</p>
+      <ul>
+        <li><a href="https://wii.hacks.guide/bootmii.html" target="_blank">How to dump your Wii's NAND</a></li>
+        <li><a href="https://wii.hacks.guide/wiiu-nand-dumper.html#section-iii-nand-backup" target="_blank">How to dump your vWii's NAND</a></li>
+      </ul>
+      
+      <h2>Requirements</h2>
+      <ol>
+        <li>Wii/vWii NAND dump.</li>
+        <li>Dolphin Emulator (version 5.0-3416 or newer is recommended).</li>
+        <li>WiiMart WAD and patched IOS WAD for your dumped NAND.</li>
+      </ol>
+      
+      <h2>Installation Guide</h2>
+      
+      <h3>1. Installing NAND on Dolphin:</h3>
+      <ul>
+        <li>Open Dolphin and go to <b>Tools</b> → <b>Manage NAND</b> → <b>Import BootMii NAND Backup...</b></li>
+        <li>Keep in mind that merging a new NAND will replace all existing channels and save states. Click <b>Yes</b> to continue.</li>
+        <li>Select your <b>nand.bin</b> backup file.</li>
+        <li>Wait for the import process to finish.</li>
+      </ul>
+      
+      <h3>2. Installing the Patched IOS and WiiMart:</h3>
+      <ul>
+        <li>In Dolphin, go to <b>Tools</b> → <b>Install WAD</b>.</li>
+        <li>Select <b>IOS56.wad</b> and wait for the installation to complete.</li>
+        <li>Repeat the process for <b>WiiMart.wad</b>.</li>
+      </ul>
+      
+      <h3>3. Launching WiiMart:</h3>
+      <ul>
+        <li>Return to Dolphin's main menu and go to <b>Tools</b> → <b>Load Wii System Menu 4.3x</b>.</li>
+        <li>Find and launch <b>WiiMart</b> from the Wii Menu.</li>
+      </ul>
+      
+
+        <div><a href="/guides/guide.html">Return to Installation Guide Page</a> </div>
     </div>
 
     <footer>
         <div class="footer-left">
-          <img src="../img/banner.png" alt="WiiMart Logo" class="footer-logo">
+          <img src="/img/banner.png" alt="WiiMart Logo" class="footer-logo">
           <p>Site by 
             <a href="https://github.com/ashleytarifa" target="_blank" class="ash-credit">
               <img src="https://media.discordapp.net/attachments/1088781330478801018/1352000982506012804/20cf82756f71745ab3da1fb36bda7725.png?ex=67dc6c89&is=67db1b09&hm=c5604c98330b2137b146f3aef604b693ef3ac82932a6464777474882f1593670&=&format=webp&quality=lossless" alt="Ash64 PFP" class="ash-pfp">
