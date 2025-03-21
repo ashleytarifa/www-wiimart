@@ -7,8 +7,40 @@
     <link rel="stylesheet" href="wiimart.css">
     <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .suggestions-container {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+        }
+
+        #suggestions {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ccc;
+            position: absolute;
+            background: white;
+            width: 100%;
+            max-height: 150px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+        }
+
+        #suggestions li {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        #suggestions li:hover {
+            background: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
+
   <nav class="navbar">
     <img src="img/icon.png" alt="WiiMart Icon" class="nav-icon">
     <a href="/main.html#home">Home</a>
@@ -18,252 +50,143 @@
     <a href="/main.html#faq">FAQ</a>
     <a href="/errors.html">Errors</a>
     <a href="/status.html">WiiMart Status</a>
-</nav>
+  </nav>
 
-    <div class="errors-container">
-        <h2>Errors</h2>
-        <ul>
-            <li>204042 - User is not registered with the server</li>
-            <li>204961 - SSL cipher error when trying to communicate with SOAP servers</li>
-            <li>204050 - You do not own a title; ticket not found</li>
-            <li>204036 - Problem importing Title metadata</li>
-            <li>204035 - Problem importing ticket</li>
-            <li>204037 - Problem importing title content</li>
-            <li>204034 - Invalid SOAP response</li>
-            <li>204400 - 204899 HTTP Status Code (from HTTP 100 to HTTP 599)</li>
-            <li>20955X - 2-7 Timeout occurred between client and server</li>
-        </ul>
+  <div id="home" class="container-intro">
+      <img class="logo" src="img/banner.png" alt="WiiMart Logo">
+      <h1>WiiMart Error Codes</h1>
+      <p>Search Error Codes</p>
 
-        <h2>ECS (ECommerceSOAP) errors</h2>
-        <ul>
-        <li>2056XX - ECS Error</li>
-        <li>205672 - ECS Account Mismatch</li>
-        <li>205625 - ECS Gift error</li>
-        <li>205646 - Unable to send present (ECS GIFT)</li>
-        </ul>
+      <div class="suggestions-container">
+          <input type="text" id="errorCode" placeholder="Enter error code" oninput="showSuggestions(this.value)">
+          <ul id="suggestions"></ul>
+      </div>
 
-        <h2>IAS (IdentityAuthenticationSOAP) errors</h2>
-        <ul>
-        <li>2059XX/2064XX - IAS Error</li>
-        <li>205968 - "Bad device code"(?)</li>
-        </ul>
-        
-        <h2>CAS (CatalogingSOAP) errors</h2>
-        <ul>
-        <li>205627 - Cannot buy DLC for a title you don't own</li>
-        </ul>
+      <button onclick="searchError()">Search</button>
+      <pre id="result">Result will be displayed here...</pre>
 
-        <h2>Miscellaneous</h2>
-        <ul>
-        <li>Blank Page - Could not locate URL</li>
-        <li>209600/209601 - Connection timeout</li>
-        <li>2057XX/20570X - ETS Error</li>
-        <li>2058XX/205825 - PAS Error</li>
-<li>2066XX - OSS Error</li>
-<li>209531 - Page was not found</li>
-<li>209622 - SSL CA unknown / not included in channel</li>
-<li>220003 - The requested URL was filtered by Opera's filter</li>
-<li>20400X - Server under heavy load</li>
-<li>204013 - Try another credit card or contact your credit card provider</li>
-<li>204015 - Server under heavy load</li>
-<li>204017 - Wii Points Card invalid</li>
-<li>204019-204041 - Server under heavy load (during software download)</li>
-<li>204038 - Wireless interferences?</li>
-<li>204042-204053 - Server under heavy load</li>
-<li>204700-204801 - Server under heavy load</li>
-<li>204901-204973 - Try another credit card or contact your credit card provider</li>
-<li>2056XX - ECS error (eCommerce SOAP)</li>
-<li>2057XX - ETS error</li>
-<li>2058XX - PAS error</li>
-<li>2059XX - IAS error (IdentityAuthentication SOAP)</li>
-<li>2064XX - IAS error (IdentityAuthentication SOAP)</li>
-<li>2066XX - OSS error</li>
-<li>205540 - This software doesn't work in the vWii</li>
-<li>205617 - Wii Points card code invalid</li>
-<li>205618 - Wii Points card is for another country</li>
-<li>205621 - Unknown error (possibly ECS gift error?)</li>
-<li>205623 - Trial period for that title expired, you can't download that again</li>
-<li>205625 - ECS gift error</li>
-<li>2056260 - Unable to send present (ECS gift error)</li>
-<li>205627 - You cannot buy DLC for a game you don't own</li>
-<li>205642 - Unknown error</li>
-<li>205643 - Unknown error</li>
-<li>205644 - Credit cards can't be used on this console.</li>
-<li>205645 - Issue with your DSi shop account?</li>
-<li>205646 - Unable to send present (ECS gift error)</li>
-<li>205672 - ECS_ACCOUNT_MISMATCH</li>
-<li>20570X - ETS error</li>
-<li>20580X - Wii Points Card error</li>
-<li>205810 - You don't have enough Wii Points / Error while redeeming your download ticket</li>
-<li>205811 - Wii Points card expired</li>
-<li>205812-205814 - OSS_ERROR_ECARD_NOT_USABLE</li>
-<li>205815 - Wii Points Card was already used</li>
-<li>205816 - Some error with the Wii Points Card</li>
-<li>205817 - Server under heavy load</li>
-<li>205818 - This card number can only be used for a specific title, it is not a Wii Points Card.</li>
-<li>205819 - Wii Points Card code is invalid</li>
-<li>205825 - PAS_ERROR_CODE</li>
-<li>205826 - Server under heavy load</li>
-<li>205829 - Server under heavy load</li>
-<li>205830 - Wii Points Card code is invalid</li>
-<li>205831 - Wii Points Card is for another Country</li>
-<li>205901 - Wii number invalid!</li>
-<li>205903 - Unknown error</li>
-<li>205906 - Problem with your online account</li>
-<li>205921-205925 - Wii NAND corrupted</li>
-<li>205928 - Unknown error</li>
-<li>205940-250941, 250943 - Problems with your "Club-Nintendo"-account. It can't get connected with your shop account</li>
-<li>205942 - Maintenance. Login not possible</li>
-<li>205958 - Unknown error</li>
-<li>205968 - IAS_BAD_DEVICE_CODE</li>
-<li>205969 - Server under heavy load</li>
-<li>206112 - OSS_ERROR_PROMO_OVER</li>
-<li>206401 - Invalid characters in nick or password</li>
-<li>206402-206403 - Problems with your "Club-Nintendo"-account. It can't get connected with your shop account</li>
-<li>206499 - Maintenance. Login not possible</li>
-<li>206601 - OSS_ERROR_INVALID_PARAM. Triggered by B_24 in Wii Shop</li>
-<li>206602 - Error during entering Wii Points Card code. Try again later.</li>
-<li>206603 - Unable to confirm credit card information</li>
-<li>206604 - Server under heavy load</li>
-<li>206607 - Error while retrieving the served content</li>
-<li>206608 - Error redeeming Wii Download Ticket</li>
-<li>206610 - Wii download ticket expired</li>
-<li>206611 - Wii download ticket invalid</li>
-<li>206612 - This Wii download ticket can't be used in your country</li>
-<li>206613 - No software available for this download ticket. May be caused by parental controls.</li>
-<li>206650 - Wrong PIN</li>
-<li>206651 - Mistake during entering the wii serial number</li>
-<li>206652 - Wrong PIN three times</li>
-<li>206653 - Nick or password wrong</li>
-<li>206660 - OSS_ERROR_NO_PROGRESS</li>
-<li>206661 - Credit card type invalid</li>
-<li>206662 - Credit card number invalid</li>
-<li>206663 - OSS_ERROR_IN_PROGRESS</li>
-<li>206664 - OSS_ERROR_NO_SECURITY_CODE</li>
-<li>206667 - Wii download ticket invalid</li>
-<li>206668 - Happens when current points count + new points would exceed the wii points limit</li>
-<li>206669 - Wii Points card invalid</li>
-<li>206670 - Problem with your Wii Shop Account (invalid Wii number)</li>
-<li>206671 - Problem with your Wii Shop Account (invalid shop app - bad title ID)</li>
-<li>206672 - Problem with your Wii Shop Account (invalid shop app - no title info)</li>
-<li>206673 - Problem with your Wii Shop Account (invalid registration status)</li>
-<li>206674 - Problem with your Wii Shop Account (unexpected eclib error)</li>
-<li>206699 - Try again later</li>
-<li>2067XX - Server under heavy load</li>
-<li>208000 - You have entered the wrong state ("Bundesland")</li>
-<li>208001 - Unable to process for credit cards (some kind of blacklist?)</li>
-<li>208002 - Billing address invalid</li>
-<li>208003 - Credit card number doesn't match card type</li>
-<li>208004 - three-digit security code invalid</li>
-<li>208005 - Mistake in credit card data.</li>
-<li>208006 - Card number invalid</li>
-<li>208007 - Expiration date invalid</li>
-<li>208008 - Postal code invalid</li>
-<li>208009 - Technical difficulties.</li>
-<li>208010 - Credit card could not get validated. Try again later.</li>
-<li>208011 - Credit card declined</li>
-<li>208012 - Credit card declined - no funds available</li>
-<li>208013 - Credit card declined - incative</li>
-<li>208014 - Credit card expired</li>
-<li>208015 - Credit card code invalid</li>
-<li>208016 - Credit card number invalid</li>
-<li>208017 - Credit card limit reached</li>
-<li>208018 - Credit card invalid</li>
-<li>208019 - Postal / zip code invalid</li>
-<li>208021 - NOA_ERROR_REFUND_CheckReq</li>
-<li>208022 - NOA_ERROR_REFUND_Exists</li>
-<li>208023 - NOA_ERROR_REFUND_Problem</li>
-<li>208025 - NOA_ERROR_EmptyVfyValue (empty security code)</li>
-<li>209XXX - Server connection timeout</li>
-<li>209531 - Web page not found (WS_ERROR_WWW_HTTP_ERR_NOT_FOUND)</li>
-<li>209593 - Access denied by Opera Wii Shop domain filter config</li>
-<li>209620 - Some JS files couldn't be loaded (CheckRegistered.jsp line ~100)</li>
-<li>209622 - SSL CA unknown / not included in channel</li>
-<li>209631 - SDCARD_ERROR_INVALID</li>
-<li>209632 - SDCARD_ERROR_EXISTS</li>
-<li>209633 - SDCARD_ERROR_NOEXISTS</li>
-<li>209634 - SDCARD_ERROR_UNKNOWN_FORMAT</li>
-<li>209635 - SDCARD_ERROR_INCORRECT_ALIGNMENT</li>
-<li>209636 - SDCARD_ERROR_INCORRECT_DEVICE</li>
-<li>209637 - SDCARD_ERROR_NO_TICKET</li>
-<li>209638 - SDCARD_ERROR_ACCESS</li>
-<li>209639 - SDCARD_ERROR_CANCELLED (cancelBackupToSDCard successful?)</li>
-<li>209640 - SDCARD_ERROR_CONTENT_INVALID (Banner is not found)</li>
-<li>209641 - SDCARD_ERROR_MAXFD</li>
-<li>209642 - SDCARD_ERROR_OUT_OF_MEMORY</li>
-<li>209643 - SDCARD_ERROR_CORRUPT (NAND_CORRUPT ERROR (Serious error))</li>
-<li>209644 - SDCARD_ERROR_ECC_CRIT</li>
-<li>209645 - SDCARD_ERROR_AUTHENTICATION</li>
-<li>209646 - SDCARD_ERROR_FATAL_ERROR</li>
-<li>209647 - SDCARD_ERROR_UNKNOWN</li>
-<li>209648 - SDCARD_ERROR_SD_NOT_INSERTED</li>
-<li>209649 - SDCARD_ERROR_SD_NOT_SUPPORTED</li>
-<li>209650 - SDCARD_ERROR_SD_CORRUPT (file system broken)</li>
-<li>209651 - SDCARD_ERROR_SD_WRITE_PROTECTED</li>
-<li>209652 - SDCARD_ERROR_SD_NO_SPACE</li>
-<li>209653 - SDCARD_ERROR_SD_FAILED (other error)</li>
-<li>209654 - SDCARD_ERROR_SD_UNKNOWN</li>
-<li>209655 - SDCARD_ERROR_WANT_OF_CAPACITY (SD full)</li>
-<li>209656 - SDCARD_ERROR_EXIST_CHECK_SOFT (title already present on SD)</li>
-<li>209657 - SDCARD_ERROR_EXCEPTION_STATE (Illegal statement and cancelBackupToSDCard error)</li>
-<li>209658-209660 - Unused</li>
-<li>209661 - EXIST_CHECK_SOFT_NAND</li>
-<li>209662 - errChannel</li>
-<li>209663 - errInodes</li>
-<li>209664 - SD Backup timeout in B-10</li>
-<li>209665 - JournalFlag error in B-10</li>
-<li>209666 - Available space error in B-09 on checking remain size</li>
-<li>209667 - Available space is not sufficient (NAND)</li>
-<li>209800 - No DNS entry for oss-auth.shop.wii.com</li>
-<li>220000 - Connection failed</li>
-<li>220001 - Unknown protocol</li>
-<li>220002 - Out of memory</li>
-<li>220003 - Filtered URL</li>
-<li>220101 - Allocation error</li>
-<li>220102 - Unsupported file</li>
-<li>220103 - Empty file</li>
-<li>220104 - Invalid file</li>
-<li>220105 - Javascript error</li>
-<li>220106 - Plugin error</li>
-<li>220201 - Not found</li>
-<li>220202 - Connection refused</li>
-<li>220301 - 220302 - HTTP error code 100 - 101</li>
-<li>220303 - 220309 - HTTP error code 200 - 206</li>
-<li>220310 - 220315 - HTTP error code 300 - 305</li>
-<li>220316 - 220331 - HTTP error code 400 - 415</li>
-          <li>220332 - 220337 - HTTP error code 500 - 505</li>
-          </ul>
+      <p>Error Code Search by <a href="https://github.com/TheErrorExe">TheErrorExe</a>.</p>
+      <div><a onclick="history.back()">Go back</a></div>
+  </div>
 
-<div><a onclick="history.back()">Go back</a></div>
-    </div>
+  <footer>
+      <div class="footer-left">
+        <img src="img/banner.png" alt="WiiMart Logo" class="footer-logo">
+        <p>Site by 
+          <a href="https://github.com/ashleytarifa" target="_blank" class="ash-credit">
+            <img src="https://avatars.githubusercontent.com/u/146955781?v=4" alt="Ash64 PFP" class="ash-pfp">
+            ash64
+          </a>
+        </p>
+        <p>Wiimart banner by 
+          <a href="https://github.com/greengreenanimations" target="_blank" class="ash-credit">
+            <img src="https://avatars.githubusercontent.com/u/203690034?v=4" alt="green PFP" class="ash-pfp">
+            greengreenanimations
+          </a>
+        </p>
+        <p>© 2025 WiiMart Project. <br> Not affiliated with Nintendo.</p>
+      </div>
 
-    <footer>
-        <div class="footer-left">
-          <img src="/img/banner.png" alt="WiiMart Logo" class="footer-logo">
-          <p>Site by 
-            <a href="https://github.com/ashleytarifa" target="_blank" class="ash-credit">
-              <img src="https://media.discordapp.net/attachments/1088781330478801018/1352000982506012804/20cf82756f71745ab3da1fb36bda7725.png?ex=67dc6c89&is=67db1b09&hm=c5604c98330b2137b146f3aef604b693ef3ac82932a6464777474882f1593670&=&format=webp&quality=lossless" alt="Ash64 PFP" class="ash-pfp">
-              ash64
-            </a>
-          </p>
-          <p>Wiimart banner by 
-            <a href="https://github.com/greengreenanimations" target="_blank" class="ash-credit">
-              <img src="https://avatars.githubusercontent.com/u/203690034?v=4" alt="green PFP" class="ash-pfp">
-              greengreenanimations
-            </a>
-          </p>
-          <p>© 2025 WiiMart Project. <br> Not affiliated with Nintendo.</p>
-        </div>
+      <div class="footer-socials">
+          <h3>Socials</h3>
+          <a href="https://github.com/WiiMart" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://discord.gg/PBqNmJpGTP" target="_blank">
+            <i class="fab fa-discord"></i> Discord
+          </a>
+      </div>
+  </footer>
 
-        <div class="footer-socials">
-            <h3>Socials</h3>
-            <a href="https://github.com/WiiMart" target="_blank">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://discord.gg/PBqNmJpGTP" target="_blank">
-              <i class="fab fa-discord"></i> Discord
-            </a>
-        </div>
-      </footer>
+<script>
+    let errorList = {};
+
+    async function loadErrors() {
+        try {
+            const response = await fetch('https://theerrorexe.dev/api/wiimart/errors.txt');
+            const text = await response.text();
+            parseErrors(text);
+        } catch (error) {
+            console.error("Error loading WiiMart error codes:", error);
+        }
+    }
+
+    function parseErrors(text) {
+        text.split('\n').forEach(line => {
+            const match = line.match(/^([\dXx\-]+):\s*(.+)$/);
+            if (match) errorList[match[1].trim()] = match[2].trim();
+        });
+    }
+
+    function matchErrorCode(inputCode) {
+        let results = [];
+        let lowerInput = inputCode.toLowerCase();
+
+        for (let pattern in errorList) {
+            let formattedPattern = pattern.replace(/[Xx]/g, '\\d');
+            let regex = new RegExp(`^${formattedPattern}`);
+            if (regex.test(inputCode) || pattern.toLowerCase().includes(lowerInput)) {
+                results.push(`${pattern}: ${errorList[pattern]}`);
+            }
+        }
+
+        return results;
+    }
+
+    function searchError() {
+        const input = document.getElementById('errorCode').value.trim();
+        if (!input) return;
+
+        let results = matchErrorCode(input);
+        let resultElement = document.getElementById('result');
+
+        if (results.length === 0) {
+            resultElement.innerText = "No matching error found!";
+        } else {
+            resultElement.innerText = results.join('\n');
+        }
+    }
+
+    function showSuggestions(value) {
+        const suggestionBox = document.getElementById("suggestions");
+        suggestionBox.innerHTML = "";
+
+        if (!value) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        let results = matchErrorCode(value);
+
+        if (results.length === 0) {
+            suggestionBox.style.display = "none";
+            return;
+        }
+
+        results.forEach(code => {
+            const listItem = document.createElement("li");
+            listItem.textContent = code;
+            listItem.onclick = () => {
+                document.getElementById("errorCode").value = code.split(":")[0];
+                suggestionBox.innerHTML = "";
+                suggestionBox.style.display = "none";
+                searchError();
+            };
+            suggestionBox.appendChild(listItem);
+        });
+
+        suggestionBox.style.display = "block";
+    }
+
+    document.addEventListener("click", (event) => {
+        const suggestionBox = document.getElementById("suggestions");
+        if (!document.getElementById("errorCode").contains(event.target)) {
+            suggestionBox.style.display = "none";
+        }
+    });
+
+    loadErrors();
+</script>
+
 </body>
 </html>
