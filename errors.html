@@ -7,53 +7,20 @@
     <link rel="stylesheet" href="wiimart.css">
     <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-        .suggestions-container {
-            position: relative;
-            display: inline-block;
-            width: 200px;
-        }
-
-        #suggestions {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            border: 1px solid #ccc;
-            position: absolute;
-            background: white;
-            width: 100%;
-            max-height: 150px;
-            overflow-y: auto;
-            display: none;
-            z-index: 1000;
-        }
-
-        #suggestions li {
-            padding: 8px;
-            cursor: pointer;
-        }
-
-        #suggestions li:hover {
-            background: #f0f0f0;
-        }
-    </style>
 </head>
 <body>
-
   <nav class="navbar">
     <img src="img/icon.png" alt="WiiMart Icon" class="nav-icon">
-    <a href="/main.html#home">Home</a>
-    <a href="/main.html#installation">Installation</a>
+    <a href="main.html#home">Home</a>
+    <a href="main.html#installation">Installation</a>
     <a href="https://github.com/WiiMart" target="_blank">GitHub</a>
     <a href="https://discord.gg/PBqNmJpGTP" target="_blank">Discord</a>
-    <a href="/main.html#faq">FAQ</a>
-    <a href="/errors.html">Errors</a>
-    <a href="/status.html">WiiMart Status</a>
+    <a href="main.html#faq">FAQ</a>
+    <a href="errors.html">Errors</a>
+    <a href="status.html">WiiMart Status</a>
   </nav>
 
-  <div id="home" class="container-intro">
-      <img class="logo" src="img/banner.png" alt="WiiMart Logo">
+  <div id="home" class="container">
       <h1>WiiMart Error Codes</h1>
       <p>Search Error Codes</p>
 
@@ -65,7 +32,7 @@
       <button onclick="searchError()">Search</button>
       <pre id="result">Result will be displayed here...</pre>
 
-      <p>Error Code Search by <a href="https://github.com/TheErrorExe">TheErrorExe</a>.</p>
+      <p>Error Code Search by <a href="https://github.com/TheErrorExe" target="_blank">TheErrorExe</a>.</p>
       <div><a onclick="history.back()">Go back</a></div>
   </div>
 
