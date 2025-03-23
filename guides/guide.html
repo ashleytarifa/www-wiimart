@@ -15,9 +15,16 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="../img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script>
 </head>
 <body>
   <nav class="navbar">
+    <div class="nav-left">
     <img src="../img/icon.png" alt="WiiMart Icon" class="nav-icon">
     <a href="../main.html#home">Home</a>
     <a href="../main.html#installation">Installation</a>
@@ -26,7 +33,9 @@
     <a href="../main.html#faq">FAQ</a>
     <a href="../errors.html">Errors</a>
     <a href="../status.html">WiiMart Status</a>
-</nav>
+    </div>
+    <button id="toggle-theme" class="theme-btn">☀️</button>
+  </nav>
 
 <div class="container">
     <h2>Installation Guide</h2>
@@ -34,12 +43,12 @@
     <div class="container-buttons">
             <a href="wii.html" class="button-image">
               <img src="../img/wii.png" alt="Clique aqui">
-              <div>Wii / vWii Guide</div>
+              <p>Wii / vWii Guide</p>
             </a>
         
             <a href="dolphin.html" class="button-image">
               <img src="../img/dolphin.png" alt="Clique aqui">
-              <div>Dolphin Guide</div>
+              <p>Dolphin Guide</p>
             </a>
           </div>
         <br>
@@ -70,6 +79,6 @@
       </a>
   </div>
 </footer>
-
+  <script src="../script.js"></script>
 </body>
 </html>

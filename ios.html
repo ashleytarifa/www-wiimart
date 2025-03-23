@@ -15,30 +15,39 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script>
 </head>
 <body>
   <nav class="navbar">
-    <img src="img/icon.png" alt="WiiMart Icon" class="nav-icon">
-    <a href="main.html#home">Home</a>
-    <a href="main.html#installation">Installation</a>
-    <a href="https://github.com/WiiMart" target="_blank">GitHub</a>
-    <a href="https://discord.gg/PBqNmJpGTP" target="_blank">Discord</a>
-    <a href="main.html#faq">FAQ</a>
-    <a href="errors.html">Errors</a>
-    <a href="status.html">WiiMart Status</a>
-</nav>
+    <div class="nav-left">
+        <img src="img/icon.png" alt="WiiMart Icon" class="nav-icon">
+        <a href="#home">Home</a>
+        <a href="#installation">Installation</a>
+        <a href="https://github.com/WiiMart" target="_blank">GitHub</a>
+        <a href="https://discord.gg/PBqNmJpGTP" target="_blank">Discord</a>
+        <a href="#faq">FAQ</a>
+        <a href="errors.html">Errors</a>
+        <a href="status.html">WiiMart Status</a>
+    </div>
+        <button id="toggle-theme" class="theme-btn">☀️</button>
+  </nav>
 
 <div class="container">
     <h2>Installing IOS56</h2>
     <div class="container-buttons">
         <a href="https://wiimart.github.io/cIOS/IOS56(Wii).wad" class="button-image">
             <img src="img/wii.png">
-            <div>IOS56 for Wii</div>
+            <p>IOS56 for Wii</p>
         </a>
 
         <a href="https://wiimart.github.io/cIOS/IOS56(vWii).wad" class="button-image">
             <img src="img/wiiu.png">
-            <div>IOS56 for vWii (Wii U)</div>
+            <p>IOS56 for vWii (Wii U)</p>
         </a>
     </div>
     <br>
@@ -68,6 +77,8 @@
       </a>
   </div>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

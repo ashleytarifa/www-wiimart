@@ -17,9 +17,15 @@
     <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script>
 </head>
 <body>
-    <nav class="navbar">
+  <nav class="navbar">
+    <div class="nav-left">
         <img src="img/icon.png" alt="WiiMart Icon" class="nav-icon">
         <a href="#home">Home</a>
         <a href="#installation">Installation</a>
@@ -28,7 +34,9 @@
         <a href="#faq">FAQ</a>
         <a href="errors.html">Errors</a>
         <a href="status.html">WiiMart Status</a>
-    </nav>
+    </div>
+        <button id="toggle-theme" class="theme-btn">☀️</button>
+  </nav>
     
     <div  id="home" class="container-intro">
         <img class="logo" src="img/banner.png" alt="WiiMart Logo">
@@ -36,29 +44,35 @@
         <p>WiiMart is a fan-made revival of the classic Wii Shop Channel, bringing back your favorite experience with a modern touch.</p>
     </div>
 
+    
+    <div class="container-warning">
+      <p>The mobile version is still a work in progress, so such things may be broken for now.</p>
+    </div>
+    
+
     <div id="installation" class="container">
         <h2>Installation</h2>
         <div class="container-buttons">
             <a href="https://github.com/WiiMart/WiiMart/releases/latest" target="_blank" class="button-image">
                 <img src="img/icon.png">
-                <div>Download WiiMart</div>
+                <p>Download WiiMart</p>
             </a>
     
             <a href="ios.html" class="button-image">
                 <img src="img/wad.png">
-                <div>Download IOS56*</div>
+                <p>Download IOS56*</p>
             </a>
 
             <a href="guides/guide.html" class="button-image">
                 <img src="img/download.png">
-                <div>Installation Guide</div>
+                <p>Installation Guide</p>
             </a>
         </div>
             <br>
-        <div>*IOS56 is necessary for WiiMart to run Properly</div>
+        <p>*IOS56 is necessary for WiiMart to run Properly</p>
     </div>
 
-<section id="faq">
+<div id="faq" class="faq">
     <h2>FAQ</h2>
   
     <div class="faq-item">
@@ -101,7 +115,7 @@
         <p>If you encounter any problems or have questions about using WiiMart, feel free to contact our support team at our <a href="https://discord.gg/PBqNmJpGTP">Discord Server</a>.</p>
       </div>
 
-  </section>
+    </div>
       
   
 <div id="gallery" class="container">
@@ -208,5 +222,7 @@
         </div>
       </footer>
       
+      <script src="script.js"></script>
+
 </body>
 </html>
