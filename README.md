@@ -4,7 +4,8 @@ i dediced to remake wiimart's original website because i was bored
 
 just to clarify this isnt the official wiimart's website, its just my version that i coded independently 
 
-## (not so) important reminder: this website will no longer receive updates (or may receive some, but they’ll be far apart), as i'm focusing on other projects. also, WiiMart has redesigned their website, which you should definitely check out! You can visit it here >  https://wiimart.org/
+## (not so) important reminder:
+this website will no longer receive updates (or may receive some, but they’ll be far apart), as i'm focusing on other projects. also, WiiMart has redesigned their website, which you should definitely check out! You can visit it here >  https://wiimart.org/
 
 feel free to fork this website on GitHub if you’d like to adjust something or use part of my code for your own project—just be sure to credit me!
 
