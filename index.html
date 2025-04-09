@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiiMart - A Wii Shop Revival</title>
+    <meta name="description" content="WiiMart is a fan-made revival of the classic Wii Shop Channel, bringing back your favorite experience with a modern touch">
+    <meta property="og:title" content="WiiMart - a working, active Wii Shop Channel revival">
+    <meta property="og:description" content="WiiMart is a fan-made revival of the classic Wii Shop Channel, bringing back your favorite experience with a modern touch">
+    <meta property="og:image" content="https://ashleytarifa.github.io/www-wiimart/img/embeds/main.png">
+    <meta property="og:url" content="https://ashleytarifa.gitub.io">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="wiimart.css">
+    <link rel="icon" href="img/icon/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+        <img src="img/icon.png" alt="WiiMart Icon" class="nav-icon">
+        <a href="#home">Home</a>
+        <a href="#installation">Installation</a>
+        <a href="https://github.com/WiiMart" target="_blank">GitHub</a>
+        <a href="https://discord.gg/PBqNmJpGTP" target="_blank">Discord</a>
+        <a href="#faq">FAQ</a>
+        <a href="errors.html">Errors</a>
+        <a href="status.html">WiiMart Status</a>
+    </div>
+        <button id="toggle-theme" class="theme-btn">☀️</button>
+  </nav>
+    
+    <div  id="home" class="container-intro">
+        <img class="logo" src="img/banner.png" alt="WiiMart Logo">
+        <h1>WiiMart - A Wii Shop Revival</h1>
+        <p>WiiMart is a fan-made revival of the classic Wii Shop Channel, bringing back your favorite experience with a modern touch.</p>
+    </div>
+
+    <div class="container-intro">
+      <h2>(not so) Important Reminder</h2>
+      <p>hello there! just a quick reminder: this website will no longer receive updates (or may receive some, but they will be far apart), as i'm focusing on other projects. Also, WiiMart has redesigned their website, which you should definitely check out! You can visit it <a href="https://wiimart.org/">here</a><br><br>
+
+        feel free to fork this website on GitHub if you’d like to adjust something or use part of my code for your own project—just be sure to credit me!<br><br>
+        
+        Thank you so much for visiting, and happy shopping :3<br><br>
+        
+        github > <a href="https://github.com/ashleytarifa" target="_blank" class="reminder">
+          <img src="https://avatars.githubusercontent.com/u/146955781?v=4" alt="Ash64 PFP" class="ash-pfp">
+          ash64
+        </a></p>
+  </div>
+    <div class="container-warning">
+      <p>The mobile version is still a work in progress, so such things may be broken for now.</p>
+    </div>
+    
+
+    <div id="installation" class="container">
+        <h2>Installation</h2>
+        <div class="container-buttons">
+            <a href="https://github.com/WiiMart/WiiMart/releases/latest" target="_blank" class="button-image">
+                <img src="img/icon.png">
+                <p>Download WiiMart</p>
+            </a>
+    
+            <a href="ios.html" class="button-image">
+                <img src="img/wad.png">
+                <p>Download IOS56*</p>
+            </a>
+
+            <a href="guides/guide.html" class="button-image">
+                <img src="img/download.png">
+                <p>Installation Guide</p>
+            </a>
+        </div>
+            <br>
+        <p>*IOS56 is necessary for WiiMart to run Properly</p>
+    </div>
+
+<div id="faq" class="faq">
+    <h2>FAQ</h2>
+  
+    <div class="faq-item">
+      <h3>What is WiiMart?</h3>
+      <p>WiiMart is a revival project, replacing the original Wii Shop Channel. You can download Virtual Console, WiiWare, and Channels for your Nintendo Wii.</p>
+    </div>
+  
+    <div class="faq-item">
+      <h3>How do I install WiiMart?</h3>
+      <p>To install WiiMart, please follow the detailed step-by-step instructions in the installation guide section above. You will need a modded Wii (or vWii) and an SD card. If you're new to modding, we recommend researching how to safely mod your console before proceeding.</p>
+    </div>
+  
+    <div class="faq-item">
+      <h3>Is it safe?</h3>
+      <p>Yes! WiiMart is completely safe to use. It doesn't require any personal information, and we ensure all downloads are free from malware. However, please note that using WiiMart requires a modded Wii (or vWii). Modding your console comes with some risks, so ensure you're following reliable guides and procedures.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Will this fully replace the Wii Shop?</h3>
+        <p>Yes, since the original Wii Shop Channel has been unsupported by Nintendo since 2019, WiiMart is a complete replacement for it.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Will Homebrew games and apps be added?</h3>
+        <p>Not our main focus right now. We're focusing on supporting the original Wii titles and preserving the best of the Wii Shop experience.</p>
+      </div>
+  
+      <div class="faq-item">
+        <h3>What is the estimated timeline?</h3>
+        <p>The timeline for updates and new features is continuously evolving. You can check the current status, including any upcoming releases or expected features, by clicking <a href="status.html">here</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is error code XXXXXX?</h3>
+        <p>If you encounter an error, you can find a list of common WiiMart error codes and their solutions <a href="errors.html">here</a>. If your issue isn&apos;t listed, feel free to reach out for further support.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How can I get support if I have issues?</h3>
+        <p>If you encounter any problems or have questions about using WiiMart, feel free to contact our support team at our <a href="https://discord.gg/PBqNmJpGTP">Discord Server</a>.</p>
+      </div>
+
+    </div>
+      
+  
+<div id="gallery" class="container">
+  <h2>Gallery</h2>
+  <div class="gallery-container">
+    <img src="img/showcase1.png" alt="Screenshot 1">
+    <img src="img/showcase2.png" alt="Screenshot 2">
+    <img src="img/showcase3.png" alt="Screenshot 3">
+  </div>
+</div>
+    
+
+
+  <div class="container">
+    <h2>WiiMart Team</h2>
+    <p>WiiMart is powered by passionate developers and contributors around the world!</p>
+
+    <div class="core-team">
+      <a href="https://github.com/OcarinaofTime" target="_blank" class="member-card">
+        <img src="https://avatars.githubusercontent.com/u/89474990?v=4" alt="OcarinaofTime64">
+        <span>OcarinaofTime64</span><br><p class="staff-name">Owner & Main Developer</p>
+      </a>
+      <a href="https://github.com/Wabagg123" target="_blank" class="member-card">
+        <img src="img/wabagg.png" alt="Wabagg123">
+        <span>Wabagg123</span><br><p class="staff-name">Developer</p>
+      </a>
+      <a href="https://github.com/LNLenost" target="_blank" class="member-card">
+        <img src="https://avatars.githubusercontent.com/u/110625168?v=4" alt="LNLenost">
+        <span>LNLenost</span><br><p class="staff-name">Web Developer & Discord Admin</p>
+      </a>
+      <a href="https://www.youtube.com/@andry6702" target="_blank" class="member-card">
+        <img src="img/andry6702.png" alt="andry6702">
+        <span>andry6702</span><br><p class="staff-name">Developer & Discord Mod</p>
+      </a>
+      <a href="https://github.com/idkwhere1sthisname" target="_blank" class="member-card">
+        <img src="https://avatars.githubusercontent.com/u/183505426?v=4" alt="idkwhereisthisname">
+        <span>idkwhereisthisname</span><br><p class="staff-name">Developer & Discord Admin</p>
+      </a>
+      <a href="https://github.com/ChrisPlayzYT" target="_blank" class="member-card">
+        <img src="https://avatars.githubusercontent.com/u/191655784?v=4" alt="ChrisplayzWii">
+        <span>ChrisplayzWii</span><br><p class="staff-name">Developer & Discord Admin</p>
+      </a>
+      <a href="https://gemdation.com/" target="_blank" class="member-card">
+        <img src="img/gemdation.png" alt="Gemdation">
+        <span>Gemdation</span><br><p class="staff-name">Discord Admin</p>
+      </a>
+      <a href="https://github.com/thom2305" target="_blank" class="member-card">
+        <img src="https://avatars.githubusercontent.com/u/102167733?v=4" alt="Thom"><br>
+        <span>Thom</span><br><p class="staff-name">Discord Admin</p>
+      </a>
+      <a href="https://github.com/your2slow" target="_blank" class="member-card">
+        <img src="https://avatars.githubusercontent.com/u/201518381?v=4" alt="YourTooSlow">
+        <span>YourTooSlow</span><br><p class="staff-name">Discord Admin</p>
+      </a>
+
+    </div>
+  
+    <h3>Contributors</h3>
+    <div class="contributors">
+      <a href="https://github.com/TheErrorExe" target="_blank" class="contributor-box">
+        <img src="https://avatars.githubusercontent.com/u/161362055?v=4" alt="TheErrorExe" title="TheErrorExe - Developer">
+      </a>
+      <a href="https://github.com/MrRM05" target="_blank" class="contributor-box">
+        <img src="https://avatars.githubusercontent.com/u/173334152?v=4" alt="MrRM05" title="MrRM05 - Translator">
+      </a>
+      <a href="https://github.com/larsenv" target="_blank" class="contributor-box">
+        <img src="https://avatars.githubusercontent.com/u/4673969?v=4" alt="Larsen" title="Larsen V - Server Hosting">
+      </a>
+      <a href="https://github.com/greengreenanimations" target="_blank" class="contributor-box">
+        <img src="https://avatars.githubusercontent.com/u/203690034?v=4" alt="greengreenanimations" title="greengreenanimations - WiiMart banner">
+      </a>
+      <a href="https://github.com/ashleytarifa" target="_blank" class="contributor-box">
+        <img src="https://avatars.githubusercontent.com/u/146955781?v=4" alt="ash64" title="ash64 - WiiMart Website">
+      </a>
+      <a href="https://github.com/Dal1ster" target="_blank" class="contributor-box">
+        <img src="https://avatars.githubusercontent.com/u/76823236?v=4" alt="Danielle" title="Danielle - Contributor">
+      </a>
+
+    </div>
+  </section> 
+</div>
+
+    <footer>
+        <div class="footer-left">
+          <img src="img/banner.png" alt="WiiMart Logo" class="footer-logo">
+          <p>Site by 
+            <a href="https://github.com/ashleytarifa" target="_blank" class="ash-credit">
+              <img src="https://avatars.githubusercontent.com/u/146955781?v=4" alt="Ash64 PFP" class="ash-pfp">
+              ash64
+            </a>
+          </p>
+          <p>© 2025 WiiMart Project. Not affiliated with Nintendo.</p>
+          <p>This website is open source, you can check its contents <a href="https://github.com/ashleytarifa/www-wiimart" target="_blank">here</a>.</p>
+        </div>
+
+        <div class="footer-socials">
+            <h3>Socials</h3>
+            <a href="https://github.com/WiiMart" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://discord.gg/PBqNmJpGTP" target="_blank">
+              <i class="fab fa-discord"></i> Discord
+            </a>
+        </div>
+      </footer>
+      
+      <script src="script.js"></script>
+
+</body>
+</html>
