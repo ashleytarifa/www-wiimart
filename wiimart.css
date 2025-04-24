@@ -99,7 +99,7 @@ a:hover {
 }
 
 .theme-btn {
-  margin-left: auto; /* empurra o botão pro lado direito */
+  margin-left: auto;
   background: none;
   border: none;
   font-size: 24px;
@@ -120,7 +120,7 @@ a:hover {
 .navbar a {
   color: var(--navbar-text);
   font-weight: bold;
-  font-size: 1.2em; /* Ajuste o tamanho aqui */
+  font-size: 1.2em;
 }
 
 /* Titles */
@@ -134,6 +134,8 @@ h1, h2 {
 /* Logo */
 .logo {
   width: 250px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Button Container */
@@ -142,6 +144,7 @@ h1, h2 {
   justify-content: center; 
   gap: 20px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 /* General Containers */
@@ -242,8 +245,10 @@ footer {
   color: white;
   padding: 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 20px;
 }
 
 footer p {
@@ -252,10 +257,12 @@ footer p {
 
 .footer-left {
   max-width: 450px;
+  width: 100%;
 }
 
 .footer-logo {
   width: 250px;
+  max-width: 100%;
   margin-bottom: 10px;
 }
 
@@ -340,8 +347,6 @@ footer p {
   color: var(--text);
 }
 
-
-
 .member-card {
   background: var(--white);
   border: 2px solid #00c2ff;
@@ -410,8 +415,8 @@ footer p {
 
 /* FAQ */
 #faq {
-  width: 100%;   /* Garante que o elemento ocupe 100% da largura do container */
-  max-width: 800px; /* Limita a largura da FAQ */
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto 50px;
   padding: 20px;
   background-color: var(--faq-bg);
@@ -441,15 +446,14 @@ footer p {
 
 /* Gallery */
 #gallery {
-  width: 100%;   /* Garante que o elemento ocupe 100% da largura do container */
-  max-width: 800px; /* Limita a largura da galeria */
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto 50px;
   padding: 20px;
   background-color: var(--faq-bg);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 #gallery h2 {
   text-align: center;
@@ -467,32 +471,13 @@ footer p {
 
 .gallery-container img {
   width: 100%;
-  max-width: 350px; /* Limita o tamanho das imagens */
+  max-width: 350px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo da seção errors */
-.errors-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.errors-container h2 {
-  text-align: center;
-}
-
-.errors-container ul, .errors-container ol {
-    text-align: left;
-    padding-left: 20px; /* Adicionando um espaço para listas */
-}
-
-/* Código das features sem alteração */
+/* Status Cards */
 .status-container {
   display: flex;
   flex-direction: column;
@@ -521,12 +506,11 @@ footer p {
   color: #fff;
 }
 
-.feature-status.green { background-color: #2ecc71; }   /* Fully functioning */
-.feature-status.yellow { background-color: #f1c40f; }  /* Semi-functional */
-.feature-status.red { background-color: #e74c3c; }     /* Non-funcional */
+.feature-status.green { background-color: #2ecc71; }
+.feature-status.yellow { background-color: #f1c40f; }
+.feature-status.red { background-color: #e74c3c; }
 
-/* Errors */
-
+/* Suggestions */
 .suggestions-container {
   position: relative;
   display: inline-block;
@@ -558,7 +542,6 @@ input {
   font-size: 16px;
 }
 
-
 button {
   border: none;
   outline: none;
@@ -570,8 +553,7 @@ button {
   border-radius: 5px;
   transition: all ease 0.1s;
   box-shadow: 0px 5px 0px 0px var(--button-hover);
-  margin-left: 10px; /* Aqui separa o botão do input */
-
+  margin-left: 10px;
 }
 
 button:active {
@@ -593,161 +575,196 @@ button:active {
   background: #f0f0f0;
 }
 
+/* Mobile Menu */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--navbar-text);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  width: 100%;
+  background: var(--navbar);
+  padding: 10px 0;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--navbar-text);
+  text-align: center;
+}
+
 /* Media Query for max-width 768px */
 @media screen and (max-width: 768px) {
-
   .container-warning {
     display: block;
   }
 
   .navbar {
-    justify-content: space-between; 
+    justify-content: space-between;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+  }
+
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-icon {
+    width: 30px;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .container-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+  width: 100%;
+  }
+
+  .button-image {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .button-image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .container,
+  .container-intro,
+  .container-guide,
+  .errors-container,
+  #faq,
+  #gallery {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .text-guide {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .member-card {
+    width: 150px;
+    height: 250px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-left,
+  .footer-socials {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-socials h3 {
+    margin: 0 auto 10px;
+  }
+
+  .gallery-container {
+    width: 100%;
+  }
+
+  .gallery-container img {
+    max-width: 100%;
+  }
+
+  .status-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .feature-name {
+    font-size: 1em;
+  }
+}
+
+/* Media Query for max-width 480px */
+@media screen and (max-width: 480px) {
+  .navbar {
+    gap: 10px;
   }
 
   .navbar a {
     font-size: 0.8em;
   }
 
-  .navbar a:not(:first-child) {
-    display: none; 
-  }
-
-  .nav-icon {
-    width: 30px; 
-  }
-
   .logo {
-    width: 200px; 
-  }
-
-  .container-buttons {
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .container {
-    align-content: center;
-    width: 85%;
-    margin: 20px;
-    padding: 15px;
-  }
-
-  .container-intro {
-    width: 80%;
-    text-align: center;
-  }
-
-  .button-image {
-    width: 100%;
-    max-width: 300px;
-    margin: 10px 0;
-  }
-
-  .staff-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  .staff-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .staff-img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .footer-left {
-    max-width: 100%;
-  }
-
-  .footer-logo {
-    width: 100%;
-  }
-
-  .gallery-container {
-    width: 85%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery-container img {
-    width: 100%;
-    max-width: 100%; 
-    height: auto;
-  }
-
-  .faq-item {
-    margin-bottom: 10px;
-  }
-
-  #faq, #gallery {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 15px;
-  }
-
-  .container h2, .container-intro h1 {
-    font-size: 24px;
-  }
-
-}
-
-/* Media Query for max-width 480px */
-@media screen and (max-width: 480px) {
-
-  .navbar {
-    gap: 10px; 
-  }
-
-  .navbar a {
-    font-size: 0.7em;
-  }
-
-  .button-image img {
-    width: 120px;
-    height: 120px; 
+    width: 150px;
   }
 
   .button-image div {
     font-size: 14px;
   }
 
-  .logo {
-    width: 180px;
+  .member-card {
+    width: 130px;
+    height: 230px;
+    padding: 10px;
   }
 
   .staff-name {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
-  #faq, #gallery {
-    padding: 10px;
-    margin: 0 auto;
+  .contributor-box {
+    width: 60px;
+    height: 60px;
   }
 
-  .gallery-container {
-    flex-direction: column;
-    align-items: center;
+  .container h2, 
+  .container-intro h1 {
+    font-size: 22px;
   }
 
-  .gallery-container img {
-    max-width: 250px;
+  .team-section h2 {
+    font-size: 2em;
   }
 
-  .staff-role {
-    font-size: 12px;
+  .faq-item h3 {
+    font-size: 1em;
   }
 
-  .footer-left {
-    text-align: center;
-    max-width: 100%;
+  .faq-item p {
+    font-size: 0.9em;
   }
 
-  .footer-socials {
-    text-align: center;
+  .footer-logo {
+    width: 200px;
   }
-
 }
