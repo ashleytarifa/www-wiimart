@@ -1,12 +1,23 @@
-WiiMart is a fan-made revival of the classic Wii Shop Channel, bringing back your favorite experience with a modern touch
+# WiiMart Website (Fan Version)
 
-i dediced to remake wiimart's original website because i was bored
+a fan-made revival of the classic Wii Shop Channel, built just for fun and nostalgia — with a little modern twist :3
 
-just to clarify this isnt the official wiimart's website, its just my version that i coded independently 
+**Note:** This is an independent remake and not the official WiiMart site
 
-## (not so) important reminder:
-this website will no longer receive updates (or may receive some, but they’ll be far apart), as i'm focusing on other projects. also, WiiMart has redesigned their website, which you should definitely check out! You can visit it here >  https://wiimart.org/
+## 🌟 about this Project
 
-feel free to fork this website on GitHub if you’d like to adjust something or use part of my code for your own project—just be sure to credit me!
+i created this version of WiiMart’s website simply because i was bored lol. this project was built independently, without any affiliation to the actual WiiMart team
 
-Thank you so much for visiting, and happy shopping :3
+while it started as a fun side project, it's no longer receiving active updates (or maybe just a few scattered ones), as I’ve shifted focus to other creative things I'm working on ^^
+
+## Check Out the Official Site!
+
+WiiMart has since released a new official website, and I highly recommend checking it out here:
+👉 [https://wiimart.org/](https://wiimart.org/)
+
+## 💾 Usage
+
+feel free to fork this repo if you’d like to play around with it, remix it, or use parts of the code for your own experiments. since im not updating this website anymore
+all i ask is that you please credit me somewhere if you do (≧◡≦)
+
+Happy shopping!
